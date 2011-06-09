@@ -1,0 +1,3 @@
+This is a solver for emacs multiplication puzzle which comes bundled 
+with emacs. Currently brute force method is used to solve. Bettering may 
+be expected. Requires python 2.7.

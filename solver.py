@@ -64,12 +64,22 @@ def check(a,b,c,d,e):
 									if digit(cx,ix)==digit(cy,iy):
 										return False
 	return True
-					
-for num1 in range(100,1000):
-	for num2 in range(10,100):
-		product1=digit(num2,0)*num1
-		product2=digit(num2,1)*num1
-		product=num1*num2
-		if check(num1,num2,product1,product2,product):
-			print num1,num2,product1,product2,product 
-			exit()
+
+
+if len(sys.argv)!=6:
+	print "Usage :"
+	print "python solver.py <number1> <number2> <product1> <product2> <product>"
+	exit()
+
+def solve():					
+	for num1 in range(100,1000):
+		for num2 in range(10,100):
+			product1=digit(num2,0)*num1
+			product2=digit(num2,1)*num1
+			product=num1*num2
+			if check(num1,num2,product1,product2,product):
+				print num1,num2,product1,product2,product 
+				exit()
+				
+if __name__=='__main__':
+	solve()
